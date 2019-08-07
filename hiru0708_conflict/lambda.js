@@ -5,7 +5,7 @@ exports.handler = function (event, context, callback) {
     s3.listObjects({
         'Bucket': 'as2-test-lahiru',
         'MaxKeys': 100,
-        'Prefix': ''
+        'Prefix': 'test'
     }).promise()
         .then(data => {
             console.log(data);           // successful response
